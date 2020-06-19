@@ -135,6 +135,7 @@
             this.LLForgotPassword.TabIndex = 9;
             this.LLForgotPassword.TabStop = true;
             this.LLForgotPassword.Text = "Forgot Password?";
+            this.LLForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLForgotPassword_LinkClicked);
             // 
             // btnLogin
             // 

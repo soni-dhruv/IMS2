@@ -50,6 +50,14 @@ namespace IMS
             }
         }
 
+        // Forgot Password
+        private void LLForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword FP = new ForgotPassword();
+            FP.Show();
+            this.Hide();
+        }
+
         //Enter Key Event
         private void txtBoxPassword_KeyDown(object sender, KeyEventArgs e)
         {
@@ -128,5 +136,7 @@ namespace IMS
                 errorProvider3.SetError(btnLogin, "Kindly Enter Correct Username and Password");
             }            
         }
+
+        
     }
 }

@@ -32,3 +32,4 @@ E:\MyProject\IMS\IMS\obj\Debug\IMS.pdb
 E:\MyProject\IMS\IMS\bin\Debug\IMS.exe.config
 E:\MyProject\IMS\IMS\bin\Debug\IMS.exe
 E:\MyProject\IMS\IMS\bin\Debug\IMS.pdb
+E:\MyProject\IMS\IMS\obj\Debug\IMS.ForgotPassword.resources
