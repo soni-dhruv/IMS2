@@ -273,7 +273,7 @@
         private System.Windows.Forms.LinkLabel LLForgotPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnSignup;
-        private System.Windows.Forms.Button Close;
+        private new System.Windows.Forms.Button Close;
         private System.Windows.Forms.LinkLabel LLPasswordShow;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

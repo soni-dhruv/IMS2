@@ -20,3 +20,15 @@ E:\MY PGDIT\Semester 2\IMS\IMS\obj\Debug\IMS.exe
 E:\MY PGDIT\Semester 2\IMS\IMS\obj\Debug\IMS.pdb
 E:\MY PGDIT\Semester 2\IMS\IMS\obj\Debug\IMS.SignupForm.resources
 E:\MY PGDIT\Semester 2\IMS\IMS\obj\Debug\IMS.HomePage.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.csprojAssemblyReference.cache
+E:\MyProject\IMS\IMS\obj\Debug\IMS.HomePage.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.LoginForm.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.Properties.Resources.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.SignupForm.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.csproj.GenerateResource.cache
+E:\MyProject\IMS\IMS\obj\Debug\IMS.csproj.CoreCompileInputs.cache
+E:\MyProject\IMS\IMS\obj\Debug\IMS.exe
+E:\MyProject\IMS\IMS\obj\Debug\IMS.pdb
+E:\MyProject\IMS\IMS\bin\Debug\IMS.exe.config
+E:\MyProject\IMS\IMS\bin\Debug\IMS.exe
+E:\MyProject\IMS\IMS\bin\Debug\IMS.pdb

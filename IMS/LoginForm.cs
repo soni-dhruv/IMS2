@@ -21,6 +21,12 @@ namespace IMS
         private void Form1_Load(object sender, EventArgs e)
         {
             this.ActiveControl = txtBoxuID;
+            if (Properties.Settings.Default.uName != string.Empty)
+            {
+                txtBoxuID.Text = Properties.Settings.Default.uName;
+                txtBoxPassword.Text = Properties.Settings.Default.uPassword;
+                RememberMe.Checked = true;
+            }
         }
 
         //X close button
@@ -84,6 +90,23 @@ namespace IMS
                 errorProvider2.Clear();
             }
 
+            //Remember Me
+            if (RememberMe.Checked == true)
+            {
+                Properties.Settings.Default.uName = txtBoxuID.Text;
+                //Properties.Settings.Default.uName = txtBoxuID.Text;
+                //Properties.Settings.Default.uPassword = txtBoxPassword.Text;
+                Properties.Settings.Default.uPassword = txtBoxPassword.Text;
+                Properties.Settings.Default.Save();
+            }
+            if (RememberMe.Checked == false)
+            {
+                Properties.Settings.Default.uName = "";
+                Properties.Settings.Default.uPassword = "";
+                Properties.Settings.Default.Save();
+            }
+
+            //Main m = new Main();
             //Connection Database            
             SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
             SqlCommand cmd = new SqlCommand("select * from signup where userId=@id and uPassword=@pass", con);

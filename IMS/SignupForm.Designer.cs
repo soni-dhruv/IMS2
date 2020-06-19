@@ -420,7 +420,7 @@
         private System.Windows.Forms.TextBox txtBoxUid;
         private System.Windows.Forms.TextBox txtBoxPassword;
         private System.Windows.Forms.TextBox txtBoxConfirmPassword;
-        private System.Windows.Forms.Button Close;
+        private new System.Windows.Forms.Button Close;
         private System.Windows.Forms.LinkLabel LLPasswordShow;
         private System.Windows.Forms.TextBox txtBoxLName;
         private System.Windows.Forms.Label lName;
