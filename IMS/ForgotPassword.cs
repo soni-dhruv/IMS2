@@ -7,14 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Xml;
+using System.Net;
+using System.Net.Mail;
 
 namespace IMS
 {
     public partial class ForgotPassword : Form
     {
+        string OTPCode;
+        public static string to;
+
         public ForgotPassword()
         {
             InitializeComponent();
+        }
+        private void ForgotPassword_Load(object sender, EventArgs e)
+        {
+            verifyOTP.Hide();
+            txtBoxVerifyOTP.Hide();
+            btnVerifyOTP.Hide();
+            newPassword.Hide();
+            txtBoxNewPassword.Hide();
+            confirmPassword.Hide();
+            txtBoxConfirmPassword.Hide();
+            LLPasswordShow.Hide();
+            LLCPasswordShow.Hide();
         }
 
         // X Close Button
@@ -110,15 +129,15 @@ namespace IMS
         // Confirm Password Hide Show
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (linkLabel1.Text == "Show")
+            if (LLCPasswordShow.Text == "Show")
             {
                 txtBoxConfirmPassword.PasswordChar = '\0';
-                linkLabel1.Text = "Hide";
+                LLCPasswordShow.Text = "Hide";
             }
             else
             {
                 txtBoxConfirmPassword.PasswordChar = '●';
-                linkLabel1.Text = "Show";
+                LLCPasswordShow.Text = "Show";
             }
         }
 
@@ -148,28 +167,70 @@ namespace IMS
             }
         }
 
+        
+        private void btnOTP_Click(object sender, EventArgs e)
+        {
+            // Show
+            verifyOTP.Show();            
+            btnVerifyOTP.Show();
+            txtBoxVerifyOTP.Show();
+            txtBoxEmail.ReadOnly = true;
+            btnOTP.Enabled = false;
+
+            // Send OTP
+            string from, pass, messageBody;
+            Random rand = new Random();
+            OTPCode = (rand.Next(999999)).ToString();
+
+            MailMessage message = new MailMessage();
+            to = (txtBoxEmail.Text).ToString();
+            from = "";
+            pass = "";
+            messageBody = "Dhruv Stock System Reset OTP Code is: " + OTPCode + ". Dont share OTP with anyone.";
+            message.To.Add(to);
+            message.From = new MailAddress(from);
+            message.Body = messageBody;
+            message.Subject = "Reset Password OTP";
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Credentials = new NetworkCredential(from, pass);
+
+            try
+            {
+                smtp.Send(message);
+                MessageBox.Show("Code Sent Successfully", "OTP Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Verify OTP Button
+        private void btnVerifyOTP_Click(object sender, EventArgs e)
+        {            
+            if(OTPCode == (txtBoxVerifyOTP.Text).ToString())
+            {
+                //to = txtBoxEmail.Text;
+                newPassword.Show();
+                txtBoxNewPassword.Show();
+                confirmPassword.Show();
+                txtBoxConfirmPassword.Show();
+                LLPasswordShow.Show();
+                LLCPasswordShow.Show();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect OTP", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Change Password Button
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            // User ID Blank Validation
-            if (txtBoxuID.Text == "")
-            {
-                errorProvider3.SetError(userId, "*Required Field");
-            }
-            else
-            {
-                errorProvider3.Clear();
-            }
-
-            // Mobile Number Blank Validation
-            if (txtBoxMobileNo.Text == "")
-            {
-                errorProvider4.SetError(mobileNo, "*Required Field");
-            }
-            else
-            {
-                errorProvider4.Clear();
-            }
-
             // E-Mail Blank Validation
             if (txtBoxEmail.Text == "")
             {

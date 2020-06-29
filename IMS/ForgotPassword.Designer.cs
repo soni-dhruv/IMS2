@@ -38,10 +38,6 @@ namespace IMS
             this.Close = new System.Windows.Forms.Button();
             this.btn2Login = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.txtBoxMobileNo = new System.Windows.Forms.TextBox();
-            this.mobileNo = new System.Windows.Forms.Label();
-            this.txtBoxuID = new System.Windows.Forms.TextBox();
-            this.userId = new System.Windows.Forms.Label();
             this.RetrivePassword = new System.Windows.Forms.Label();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.eMail = new System.Windows.Forms.Label();
@@ -51,13 +47,18 @@ namespace IMS
             this.confirmPassword = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.LLPasswordShow = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.LLCPasswordShow = new System.Windows.Forms.LinkLabel();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnOTP = new System.Windows.Forms.Button();
+            this.txtBoxVerifyOTP = new System.Windows.Forms.TextBox();
+            this.verifyOTP = new System.Windows.Forms.Label();
+            this.btnVerifyOTP = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -66,6 +67,7 @@ namespace IMS
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,7 +101,7 @@ namespace IMS
             this.Close.Location = new System.Drawing.Point(335, 0);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(30, 30);
-            this.Close.TabIndex = 12;
+            this.Close.TabIndex = 31;
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
@@ -114,7 +116,7 @@ namespace IMS
             this.btn2Login.Location = new System.Drawing.Point(50, 436);
             this.btn2Login.Name = "btn2Login";
             this.btn2Login.Size = new System.Drawing.Size(262, 30);
-            this.btn2Login.TabIndex = 25;
+            this.btn2Login.TabIndex = 30;
             this.btn2Login.Text = "Back To Login";
             this.btn2Login.UseVisualStyleBackColor = false;
             this.btn2Login.Click += new System.EventHandler(this.btn2Login_Click);
@@ -129,49 +131,10 @@ namespace IMS
             this.btnChangePassword.Location = new System.Drawing.Point(50, 394);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(262, 30);
-            this.btnChangePassword.TabIndex = 24;
+            this.btnChangePassword.TabIndex = 29;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // txtBoxMobileNo
-            // 
-            this.txtBoxMobileNo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMobileNo.Location = new System.Drawing.Point(50, 179);
-            this.txtBoxMobileNo.Name = "txtBoxMobileNo";
-            this.txtBoxMobileNo.PasswordChar = '●';
-            this.txtBoxMobileNo.Size = new System.Drawing.Size(262, 23);
-            this.txtBoxMobileNo.TabIndex = 20;
-            // 
-            // mobileNo
-            // 
-            this.mobileNo.AutoSize = true;
-            this.mobileNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mobileNo.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.mobileNo.Location = new System.Drawing.Point(46, 154);
-            this.mobileNo.Name = "mobileNo";
-            this.mobileNo.Size = new System.Drawing.Size(130, 22);
-            this.mobileNo.TabIndex = 19;
-            this.mobileNo.Text = "Mobile Number";
-            // 
-            // txtBoxuID
-            // 
-            this.txtBoxuID.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxuID.Location = new System.Drawing.Point(50, 119);
-            this.txtBoxuID.Name = "txtBoxuID";
-            this.txtBoxuID.Size = new System.Drawing.Size(262, 23);
-            this.txtBoxuID.TabIndex = 18;
-            // 
-            // userId
-            // 
-            this.userId.AutoSize = true;
-            this.userId.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userId.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.userId.Location = new System.Drawing.Point(46, 94);
-            this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(70, 22);
-            this.userId.TabIndex = 17;
-            this.userId.Text = "User ID";
             // 
             // RetrivePassword
             // 
@@ -187,9 +150,8 @@ namespace IMS
             // txtBoxEmail
             // 
             this.txtBoxEmail.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(50, 239);
+            this.txtBoxEmail.Location = new System.Drawing.Point(50, 118);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.PasswordChar = '●';
             this.txtBoxEmail.Size = new System.Drawing.Size(262, 23);
             this.txtBoxEmail.TabIndex = 21;
             // 
@@ -198,7 +160,7 @@ namespace IMS
             this.eMail.AutoSize = true;
             this.eMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eMail.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.eMail.Location = new System.Drawing.Point(46, 214);
+            this.eMail.Location = new System.Drawing.Point(46, 93);
             this.eMail.Name = "eMail";
             this.eMail.Size = new System.Drawing.Size(60, 22);
             this.eMail.TabIndex = 27;
@@ -209,7 +171,7 @@ namespace IMS
             this.newPassword.AutoSize = true;
             this.newPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.newPassword.Location = new System.Drawing.Point(46, 274);
+            this.newPassword.Location = new System.Drawing.Point(46, 279);
             this.newPassword.Name = "newPassword";
             this.newPassword.Size = new System.Drawing.Size(130, 22);
             this.newPassword.TabIndex = 30;
@@ -218,21 +180,21 @@ namespace IMS
             // txtBoxNewPassword
             // 
             this.txtBoxNewPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNewPassword.Location = new System.Drawing.Point(50, 299);
+            this.txtBoxNewPassword.Location = new System.Drawing.Point(50, 304);
             this.txtBoxNewPassword.Name = "txtBoxNewPassword";
             this.txtBoxNewPassword.PasswordChar = '●';
             this.txtBoxNewPassword.Size = new System.Drawing.Size(262, 23);
-            this.txtBoxNewPassword.TabIndex = 22;
+            this.txtBoxNewPassword.TabIndex = 25;
             this.txtBoxNewPassword.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // txtBoxConfirmPassword
             // 
             this.txtBoxConfirmPassword.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxConfirmPassword.Location = new System.Drawing.Point(50, 358);
+            this.txtBoxConfirmPassword.Location = new System.Drawing.Point(50, 362);
             this.txtBoxConfirmPassword.Name = "txtBoxConfirmPassword";
             this.txtBoxConfirmPassword.PasswordChar = '●';
             this.txtBoxConfirmPassword.Size = new System.Drawing.Size(262, 23);
-            this.txtBoxConfirmPassword.TabIndex = 23;
+            this.txtBoxConfirmPassword.TabIndex = 27;
             this.txtBoxConfirmPassword.TextChanged += new System.EventHandler(this.txtBoxConfirmPassword_TextChanged);
             // 
             // confirmPassword
@@ -240,7 +202,7 @@ namespace IMS
             this.confirmPassword.AutoSize = true;
             this.confirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.confirmPassword.Location = new System.Drawing.Point(46, 334);
+            this.confirmPassword.Location = new System.Drawing.Point(46, 338);
             this.confirmPassword.Name = "confirmPassword";
             this.confirmPassword.Size = new System.Drawing.Size(156, 22);
             this.confirmPassword.TabIndex = 33;
@@ -254,25 +216,25 @@ namespace IMS
             // 
             this.LLPasswordShow.AutoSize = true;
             this.LLPasswordShow.BackColor = System.Drawing.Color.White;
-            this.LLPasswordShow.Location = new System.Drawing.Point(273, 305);
+            this.LLPasswordShow.Location = new System.Drawing.Point(273, 310);
             this.LLPasswordShow.Name = "LLPasswordShow";
             this.LLPasswordShow.Size = new System.Drawing.Size(34, 13);
-            this.LLPasswordShow.TabIndex = 34;
+            this.LLPasswordShow.TabIndex = 26;
             this.LLPasswordShow.TabStop = true;
             this.LLPasswordShow.Text = "Show";
             this.LLPasswordShow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LLPasswordShow_LinkClicked);
             // 
-            // linkLabel1
+            // LLCPasswordShow
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(274, 364);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(34, 13);
-            this.linkLabel1.TabIndex = 35;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Show";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            this.LLCPasswordShow.AutoSize = true;
+            this.LLCPasswordShow.BackColor = System.Drawing.Color.White;
+            this.LLCPasswordShow.Location = new System.Drawing.Point(274, 368);
+            this.LLCPasswordShow.Name = "LLCPasswordShow";
+            this.LLCPasswordShow.Size = new System.Drawing.Size(34, 13);
+            this.LLCPasswordShow.TabIndex = 28;
+            this.LLCPasswordShow.TabStop = true;
+            this.LLCPasswordShow.Text = "Show";
+            this.LLCPasswordShow.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // errorProvider2
             // 
@@ -298,13 +260,70 @@ namespace IMS
             // 
             this.errorProvider7.ContainerControl = this;
             // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // btnOTP
+            // 
+            this.btnOTP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnOTP.FlatAppearance.BorderSize = 0;
+            this.btnOTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOTP.ForeColor = System.Drawing.Color.White;
+            this.btnOTP.Location = new System.Drawing.Point(50, 148);
+            this.btnOTP.Name = "btnOTP";
+            this.btnOTP.Size = new System.Drawing.Size(262, 30);
+            this.btnOTP.TabIndex = 22;
+            this.btnOTP.Text = "Send OTP";
+            this.btnOTP.UseVisualStyleBackColor = false;
+            this.btnOTP.Click += new System.EventHandler(this.btnOTP_Click);
+            // 
+            // txtBoxVerifyOTP
+            // 
+            this.txtBoxVerifyOTP.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxVerifyOTP.Location = new System.Drawing.Point(49, 212);
+            this.txtBoxVerifyOTP.Name = "txtBoxVerifyOTP";
+            this.txtBoxVerifyOTP.Size = new System.Drawing.Size(262, 23);
+            this.txtBoxVerifyOTP.TabIndex = 23;
+            // 
+            // verifyOTP
+            // 
+            this.verifyOTP.AutoSize = true;
+            this.verifyOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyOTP.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.verifyOTP.Location = new System.Drawing.Point(45, 187);
+            this.verifyOTP.Name = "verifyOTP";
+            this.verifyOTP.Size = new System.Drawing.Size(99, 22);
+            this.verifyOTP.TabIndex = 38;
+            this.verifyOTP.Text = "Verify OTP";
+            // 
+            // btnVerifyOTP
+            // 
+            this.btnVerifyOTP.BackColor = System.Drawing.Color.Green;
+            this.btnVerifyOTP.FlatAppearance.BorderSize = 0;
+            this.btnVerifyOTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerifyOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerifyOTP.ForeColor = System.Drawing.Color.White;
+            this.btnVerifyOTP.Location = new System.Drawing.Point(51, 242);
+            this.btnVerifyOTP.Name = "btnVerifyOTP";
+            this.btnVerifyOTP.Size = new System.Drawing.Size(262, 30);
+            this.btnVerifyOTP.TabIndex = 24;
+            this.btnVerifyOTP.Text = "Verify OTP";
+            this.btnVerifyOTP.UseVisualStyleBackColor = false;
+            this.btnVerifyOTP.Click += new System.EventHandler(this.btnVerifyOTP_Click);
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(365, 480);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.btnVerifyOTP);
+            this.Controls.Add(this.txtBoxVerifyOTP);
+            this.Controls.Add(this.verifyOTP);
+            this.Controls.Add(this.btnOTP);
+            this.Controls.Add(this.LLCPasswordShow);
             this.Controls.Add(this.LLPasswordShow);
             this.Controls.Add(this.txtBoxConfirmPassword);
             this.Controls.Add(this.confirmPassword);
@@ -315,16 +334,13 @@ namespace IMS
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn2Login);
             this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.txtBoxMobileNo);
-            this.Controls.Add(this.mobileNo);
-            this.Controls.Add(this.txtBoxuID);
-            this.Controls.Add(this.userId);
             this.Controls.Add(this.RetrivePassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot Password";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -334,6 +350,7 @@ namespace IMS
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,10 +375,6 @@ namespace IMS
         private new System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button btn2Login;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.TextBox txtBoxMobileNo;
-        private System.Windows.Forms.Label mobileNo;
-        private System.Windows.Forms.TextBox txtBoxuID;
-        private System.Windows.Forms.Label userId;
         private System.Windows.Forms.Label RetrivePassword;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.Label eMail;
@@ -370,7 +383,7 @@ namespace IMS
         private System.Windows.Forms.TextBox txtBoxConfirmPassword;
         private System.Windows.Forms.Label confirmPassword;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private LinkLabel linkLabel1;
+        private LinkLabel LLCPasswordShow;
         private LinkLabel LLPasswordShow;
         private ErrorProvider errorProvider2;
         private ErrorProvider errorProvider3;
@@ -378,5 +391,10 @@ namespace IMS
         private ErrorProvider errorProvider5;
         private ErrorProvider errorProvider6;
         private ErrorProvider errorProvider7;
+        private ErrorProvider errorProvider8;
+        private Button btnOTP;
+        private TextBox txtBoxVerifyOTP;
+        private Label verifyOTP;
+        private Button btnVerifyOTP;
     }
 }
