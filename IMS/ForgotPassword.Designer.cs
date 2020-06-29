@@ -38,7 +38,7 @@ namespace IMS
             this.Close = new System.Windows.Forms.Button();
             this.btn2Login = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.RetrivePassword = new System.Windows.Forms.Label();
+            this.ResetPassword = new System.Windows.Forms.Label();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.eMail = new System.Windows.Forms.Label();
             this.newPassword = new System.Windows.Forms.Label();
@@ -136,16 +136,16 @@ namespace IMS
             this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
-            // RetrivePassword
+            // ResetPassword
             // 
-            this.RetrivePassword.AutoSize = true;
-            this.RetrivePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetrivePassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.RetrivePassword.Location = new System.Drawing.Point(65, 57);
-            this.RetrivePassword.Name = "RetrivePassword";
-            this.RetrivePassword.Size = new System.Drawing.Size(244, 33);
-            this.RetrivePassword.TabIndex = 16;
-            this.RetrivePassword.Text = "Retrive Password";
+            this.ResetPassword.AutoSize = true;
+            this.ResetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.ResetPassword.Location = new System.Drawing.Point(71, 57);
+            this.ResetPassword.Name = "ResetPassword";
+            this.ResetPassword.Size = new System.Drawing.Size(227, 33);
+            this.ResetPassword.TabIndex = 16;
+            this.ResetPassword.Text = "Reset Password";
             // 
             // txtBoxEmail
             // 
@@ -294,9 +294,9 @@ namespace IMS
             this.verifyOTP.ForeColor = System.Drawing.SystemColors.GrayText;
             this.verifyOTP.Location = new System.Drawing.Point(45, 187);
             this.verifyOTP.Name = "verifyOTP";
-            this.verifyOTP.Size = new System.Drawing.Size(99, 22);
+            this.verifyOTP.Size = new System.Drawing.Size(96, 22);
             this.verifyOTP.TabIndex = 38;
-            this.verifyOTP.Text = "Verify OTP";
+            this.verifyOTP.Text = "Enter OTP";
             // 
             // btnVerifyOTP
             // 
@@ -334,7 +334,7 @@ namespace IMS
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn2Login);
             this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.RetrivePassword);
+            this.Controls.Add(this.ResetPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ForgotPassword";
@@ -375,7 +375,7 @@ namespace IMS
         private new System.Windows.Forms.Button Close;
         private System.Windows.Forms.Button btn2Login;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.Label RetrivePassword;
+        private System.Windows.Forms.Label ResetPassword;
         private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.Label eMail;
         private System.Windows.Forms.Label newPassword;

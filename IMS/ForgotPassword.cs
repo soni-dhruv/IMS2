@@ -18,6 +18,7 @@ namespace IMS
     {
         string OTPCode;
         public static string to;
+        LoginForm LF = new LoginForm();
 
         public ForgotPassword()
         {
@@ -143,8 +144,7 @@ namespace IMS
 
         // Back to Login Button
         private void btn2Login_Click(object sender, EventArgs e)
-        {
-            LoginForm LF = new LoginForm();
+        {            
             LF.Show();
             this.Hide();
         }
@@ -186,7 +186,7 @@ namespace IMS
             to = (txtBoxEmail.Text).ToString();
             from = "";
             pass = "";
-            messageBody = "Dhruv Stock System Reset OTP Code is: " + OTPCode + ". Dont share OTP with anyone.";
+            messageBody = "Dhruv Stock System Password Reset OTP Code is: " + OTPCode + ". Dont share OTP with anyone.";
             message.To.Add(to);
             message.From = new MailAddress(from);
             message.Body = messageBody;
@@ -260,6 +260,26 @@ namespace IMS
             {
                 errorProvider7.Clear();
             }
+
+            // Reset Password
+
+            if (txtBoxNewPassword.Text == txtBoxConfirmPassword.Text)
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("UPDATE dbo.signup SET uPassword = '"+ txtBoxNewPassword.Text + "', Cpassword = '" + txtBoxConfirmPassword.Text + "' WHERE eMail = '"+ txtBoxEmail.Text +"' ", con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Password Reset Done Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("E-Mail Not Rlk;egistered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Back to Login Page
+            LF.Show();
+            this.Close();
         }
     }
 }
