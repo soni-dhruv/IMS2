@@ -206,7 +206,7 @@ namespace IMS
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }            
         }
 
         // Verify OTP Button
@@ -274,7 +274,7 @@ namespace IMS
             }
             else
             {
-                MessageBox.Show("E-Mail Not Rlk;egistered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("E-Mail Not Registered.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Back to Login Page

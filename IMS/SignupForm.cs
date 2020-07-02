@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
 
 namespace IMS
 {
     public partial class SignupForm : Form
     {
+        LoginForm lf = new LoginForm();
         public SignupForm()
         {
             InitializeComponent();
@@ -195,7 +197,6 @@ namespace IMS
         // Back To Login Page
         private void btn2Login_Click(object sender, EventArgs e)
         {
-            LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
         }
@@ -271,6 +272,26 @@ namespace IMS
             else
             {
                 errorProvider10.Clear();
+            }
+
+            // Sign Up
+            if (txtBoxPassword.Text != "" && txtBoxConfirmPassword.Text == txtBoxPassword.Text)
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
+                    SqlCommand cmd = new SqlCommand("insert into dbo.signup values('" + txtBoxFName.Text + "', '" + txtBoxLName.Text + "', '" + txtBoxMobileNo.Text + "', '" + txtboxEMail.Text + "', '" + txtBoxUid.Text + "', '" + txtBoxPassword.Text + "', '" + txtBoxConfirmPassword.Text + "' )", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show(txtBoxFName.Text + " " + txtBoxLName.Text + " has Successfully Signed Up.", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lf.Show();
+                    this.Close();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
