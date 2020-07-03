@@ -13,6 +13,7 @@ namespace IMS
 {
     public partial class LoginForm : Form
     {
+        public static string userId;
         public LoginForm()
         {
             InitializeComponent();
@@ -127,16 +128,16 @@ namespace IMS
             if (dt.Rows.Count > 0)
             {
                 //MessageBox.Show("Login Successful!");
+                userId = txtBoxuID.Text;
                 HomePage hp = new HomePage();
                 hp.Show();
-                this.Hide(); 
+                this.Hide();
+                userId = txtBoxuID.Text;
             }
             else
             {
                 errorProvider3.SetError(btnLogin, "Kindly Enter Correct Username and Password");
             }            
         }
-
-        
     }
 }

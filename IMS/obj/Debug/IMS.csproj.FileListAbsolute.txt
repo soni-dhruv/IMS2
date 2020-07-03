@@ -33,3 +33,7 @@ E:\MyProject\IMS\IMS\bin\Debug\IMS.exe.config
 E:\MyProject\IMS\IMS\bin\Debug\IMS.exe
 E:\MyProject\IMS\IMS\bin\Debug\IMS.pdb
 E:\MyProject\IMS\IMS\obj\Debug\IMS.ForgotPassword.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.AddStock.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.UpdateStock.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.DeleteStock.resources
+E:\MyProject\IMS\IMS\obj\Debug\IMS.ChangePassword.resources

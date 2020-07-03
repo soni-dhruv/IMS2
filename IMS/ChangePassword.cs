@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace IMS
 {
-    public partial class HomePage : Form
+    public partial class ChangePassword : Form
     {
-        public HomePage()
+        public ChangePassword()
         {
             InitializeComponent();
         }
 
-        private void HomePage_Load(object sender, EventArgs e)
+        private void btnAllStock_Click(object sender, EventArgs e)
         {
-            UserID.Text = "User ID: " + LoginForm.userId;
-            btnAllStock.Enabled = false;
+            HomePage hp = new HomePage();
+            hp.Show();
+            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -41,13 +42,6 @@ namespace IMS
         {
             DeleteStock ds = new DeleteStock();
             ds.Show();
-            this.Hide();
-        }
-
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            ChangePassword cp = new ChangePassword();
-            cp.Show();
             this.Hide();
         }
 

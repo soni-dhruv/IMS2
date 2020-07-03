@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace IMS
 {
-    public partial class HomePage : Form
+    public partial class DeleteStock : Form
     {
-        public HomePage()
+        public DeleteStock()
         {
             InitializeComponent();
         }
 
-        private void HomePage_Load(object sender, EventArgs e)
+        private void DeleteStock_Load(object sender, EventArgs e)
         {
             UserID.Text = "User ID: " + LoginForm.userId;
-            btnAllStock.Enabled = false;
+            btnDelete.Enabled = false;
+        }
+
+        private void btnAllStock_Click(object sender, EventArgs e)
+        {
+            HomePage hp = new HomePage();
+            hp.Show();
+            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -34,13 +41,6 @@ namespace IMS
         {
             UpdateStock us = new UpdateStock();
             us.Show();
-            this.Hide();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DeleteStock ds = new DeleteStock();
-            ds.Show();
             this.Hide();
         }
 

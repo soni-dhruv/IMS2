@@ -10,30 +10,30 @@ using System.Windows.Forms;
 
 namespace IMS
 {
-    public partial class HomePage : Form
+    public partial class UpdateStock : Form
     {
-        public HomePage()
+        public UpdateStock()
         {
             InitializeComponent();
         }
 
-        private void HomePage_Load(object sender, EventArgs e)
+        private void UpdateStock_Load(object sender, EventArgs e)
         {
             UserID.Text = "User ID: " + LoginForm.userId;
-            btnAllStock.Enabled = false;
+            btnUpdate.Enabled = false;
+        }
+
+        private void btnAllStock_Click(object sender, EventArgs e)
+        {
+            HomePage hp = new HomePage();
+            hp.Show();
+            this.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddStock ads = new AddStock();
             ads.Show();
-            this.Hide();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            UpdateStock us = new UpdateStock();
-            us.Show();
             this.Hide();
         }
 
