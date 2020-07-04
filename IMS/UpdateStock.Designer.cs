@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateStock));
             this.namePanel = new System.Windows.Forms.Panel();
             this.lblSignUpForm = new System.Windows.Forms.Label();
@@ -48,8 +49,14 @@
             this.StockQuantity = new System.Windows.Forms.Label();
             this.StockName = new System.Windows.Forms.Label();
             this.btnFetchData = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.totalPrice = new System.Windows.Forms.Label();
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // namePanel
@@ -204,12 +211,13 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(495, 451);
+            this.btnSubmit.Location = new System.Drawing.Point(495, 504);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(426, 30);
             this.btnSubmit.TabIndex = 36;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtBoxStockPrice
             // 
@@ -219,6 +227,7 @@
             this.txtBoxStockPrice.Size = new System.Drawing.Size(426, 24);
             this.txtBoxStockPrice.TabIndex = 33;
             this.txtBoxStockPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
+            this.txtBoxStockPrice.Leave += new System.EventHandler(this.txtBoxStockPrice_Leave);
             // 
             // txtBoxStockQuantity
             // 
@@ -228,6 +237,7 @@
             this.txtBoxStockQuantity.Size = new System.Drawing.Size(426, 24);
             this.txtBoxStockQuantity.TabIndex = 32;
             this.txtBoxStockQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
+            this.txtBoxStockQuantity.Leave += new System.EventHandler(this.txtBoxStockPrice_Leave);
             // 
             // txtBoxStockName
             // 
@@ -280,10 +290,37 @@
             this.btnFetchData.Location = new System.Drawing.Point(495, 228);
             this.btnFetchData.Name = "btnFetchData";
             this.btnFetchData.Size = new System.Drawing.Size(426, 30);
-            this.btnFetchData.TabIndex = 37;
+            this.btnFetchData.TabIndex = 32;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = false;
             this.btnFetchData.Click += new System.EventHandler(this.btnFetchData_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // txtBoxTotalPrice
+            // 
+            this.txtBoxTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalPrice.Location = new System.Drawing.Point(495, 435);
+            this.txtBoxTotalPrice.Name = "txtBoxTotalPrice";
+            this.txtBoxTotalPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxTotalPrice.TabIndex = 38;
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.AutoSize = true;
+            this.totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPrice.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.totalPrice.Location = new System.Drawing.Point(329, 437);
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.Size = new System.Drawing.Size(102, 22);
+            this.totalPrice.TabIndex = 37;
+            this.totalPrice.Text = "Total Price:";
             // 
             // UpdateStock
             // 
@@ -291,6 +328,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.txtBoxTotalPrice);
+            this.Controls.Add(this.totalPrice);
             this.Controls.Add(this.btnFetchData);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtBoxStockPrice);
@@ -312,6 +351,8 @@
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +379,9 @@
         private System.Windows.Forms.Label StockQuantity;
         private System.Windows.Forms.Label StockName;
         private System.Windows.Forms.Button btnFetchData;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.TextBox txtBoxTotalPrice;
+        private System.Windows.Forms.Label totalPrice;
     }
 }

@@ -33,6 +33,7 @@ namespace IMS
                 sqlDa.Fill(dtb);
 
                 dgv.DataSource = dtb;
+                dgv.AutoGenerateColumns = false;
             }
         }
 

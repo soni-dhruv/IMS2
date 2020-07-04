@@ -106,11 +106,11 @@ namespace IMS
                 {
                     errorProvider1.Clear();
                     SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
-                    SqlCommand cmd = new SqlCommand("insert into dbo.stock values('"+ LoginForm.userId +"', '"+ txtBoxStockName.Text +"', '"+ txtBoxStockQuantity.Text + "', '" + txtBoxStockPrice.Text + "', '" + txtBoxTotalPrice.Text + "' )", con);
+                    SqlCommand cmd = new SqlCommand("insert into dbo.stock values('"+ LoginForm.userId +"', '"+txtBoxStockName.Text +"', '"+txtBoxStockQuantity.Text + "', '" +txtBoxStockPrice.Text + "', '" +txtBoxTotalPrice.Text + "' )", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Stock Name: " + txtBoxStockName.Text + "\nStock Quantity: " + txtBoxStockQuantity.Text + "\nStock Price: " + txtBoxStockPrice.Text + "\nTotal Price: " + txtBoxTotalPrice.Text + "\nAdded Successfully.", "Signup Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Stock Name: " + txtBoxStockName.Text + "\nStock Quantity: " + txtBoxStockQuantity.Text + "\nStock Price: " + txtBoxStockPrice.Text + "\nTotal Price: " + txtBoxTotalPrice.Text + "\nAdded Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception exc)
                 {
