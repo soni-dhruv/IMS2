@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace IMS
 {
     public partial class HomePage : Form
     {
+        string connectionString = @"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True";
         public HomePage()
         {
             InitializeComponent();
@@ -22,7 +24,16 @@ namespace IMS
         {
             UserID.Text = "User ID: " + LoginForm.userId;
             btnAllStock.Enabled = false;
-            
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("select stockName, quantity, price, total from stock where userId = '"+ LoginForm.userId +"'", sqlCon);
+                DataTable dtb = new DataTable();
+                sqlDa.Fill(dtb);
+
+                dgv.DataSource = dtb;
+            }
         }
 
         // Button Add Stock

@@ -283,6 +283,7 @@
             this.btnFetchData.TabIndex = 37;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = false;
+            this.btnFetchData.Click += new System.EventHandler(this.btnFetchData_Click);
             // 
             // UpdateStock
             // 

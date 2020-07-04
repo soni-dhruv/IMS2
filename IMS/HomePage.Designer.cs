@@ -40,10 +40,14 @@
             this.btnAllStock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AllStocks = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.stockName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -191,13 +195,47 @@
             this.AllStocks.TabIndex = 9;
             this.AllStocks.Text = "All Stocks";
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(209, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(815, 500);
-            this.dataGridView1.TabIndex = 10;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stockName,
+            this.quantity,
+            this.price,
+            this.total});
+            this.dgv.Location = new System.Drawing.Point(209, 105);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 10;
+            this.dgv.Size = new System.Drawing.Size(813, 494);
+            this.dgv.TabIndex = 10;
+            // 
+            // stockName
+            // 
+            this.stockName.DataPropertyName = "stockName";
+            this.stockName.HeaderText = "Stock Name";
+            this.stockName.Name = "stockName";
+            this.stockName.Width = 200;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Stock Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.Width = 200;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "Stock Price";
+            this.price.Name = "price";
+            this.price.Width = 200;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.HeaderText = "Total Amount";
+            this.total.Name = "total";
+            this.total.Width = 200;
             // 
             // HomePage
             // 
@@ -205,7 +243,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.AllStocks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.namePanel);
@@ -219,7 +257,7 @@
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +276,10 @@
         private System.Windows.Forms.Button btnAllStock;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label AllStocks;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
     }
 }

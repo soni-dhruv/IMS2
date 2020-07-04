@@ -71,5 +71,11 @@ namespace IMS
                 e.Handled = true;
             }
         }
+
+        // Fetch Data
+        private void btnFetchData_Click(object sender, EventArgs e)
+        {
+            txtBoxStockName.ReadOnly = true;
+        }
     }
 }
