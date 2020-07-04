@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddStock));
             this.namePanel = new System.Windows.Forms.Panel();
             this.lblSignUpForm = new System.Windows.Forms.Label();
@@ -40,8 +41,19 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.AddStocks = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.txtBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.TotalPrice = new System.Windows.Forms.Label();
+            this.txtBoxStockPrice = new System.Windows.Forms.TextBox();
+            this.txtBoxStockQuantity = new System.Windows.Forms.TextBox();
+            this.txtBoxStockName = new System.Windows.Forms.TextBox();
+            this.StockPrice = new System.Windows.Forms.Label();
+            this.StockQuantity = new System.Windows.Forms.Label();
+            this.StockName = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // namePanel
@@ -190,12 +202,121 @@
             this.AddStocks.TabIndex = 11;
             this.AddStocks.Text = "Add Stock";
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.Green;
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.White;
+            this.btnSubmit.Location = new System.Drawing.Point(495, 451);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(426, 30);
+            this.btnSubmit.TabIndex = 27;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // txtBoxTotalPrice
+            // 
+            this.txtBoxTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalPrice.Location = new System.Drawing.Point(495, 360);
+            this.txtBoxTotalPrice.Name = "txtBoxTotalPrice";
+            this.txtBoxTotalPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxTotalPrice.TabIndex = 26;
+            this.txtBoxTotalPrice.Leave += new System.EventHandler(this.txtBoxTotalPrice_Leave);
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.AutoSize = true;
+            this.TotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPrice.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.TotalPrice.Location = new System.Drawing.Point(329, 362);
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(102, 22);
+            this.TotalPrice.TabIndex = 25;
+            this.TotalPrice.Text = "Total Price:";
+            // 
+            // txtBoxStockPrice
+            // 
+            this.txtBoxStockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockPrice.Location = new System.Drawing.Point(495, 295);
+            this.txtBoxStockPrice.Name = "txtBoxStockPrice";
+            this.txtBoxStockPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockPrice.TabIndex = 24;
+            this.txtBoxStockPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
+            this.txtBoxStockPrice.Layout += new System.Windows.Forms.LayoutEventHandler(this.txtBoxStockPrice_Layout);
+            this.txtBoxStockPrice.Leave += new System.EventHandler(this.txtBoxStockPrice_Leave);
+            // 
+            // txtBoxStockQuantity
+            // 
+            this.txtBoxStockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockQuantity.Location = new System.Drawing.Point(495, 228);
+            this.txtBoxStockQuantity.Name = "txtBoxStockQuantity";
+            this.txtBoxStockQuantity.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockQuantity.TabIndex = 23;
+            this.txtBoxStockQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
+            // 
+            // txtBoxStockName
+            // 
+            this.txtBoxStockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockName.Location = new System.Drawing.Point(495, 159);
+            this.txtBoxStockName.Name = "txtBoxStockName";
+            this.txtBoxStockName.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockName.TabIndex = 22;
+            // 
+            // StockPrice
+            // 
+            this.StockPrice.AutoSize = true;
+            this.StockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockPrice.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockPrice.Location = new System.Drawing.Point(325, 297);
+            this.StockPrice.Name = "StockPrice";
+            this.StockPrice.Size = new System.Drawing.Size(106, 22);
+            this.StockPrice.TabIndex = 21;
+            this.StockPrice.Text = "Stock Price:";
+            // 
+            // StockQuantity
+            // 
+            this.StockQuantity.AutoSize = true;
+            this.StockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockQuantity.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockQuantity.Location = new System.Drawing.Point(299, 230);
+            this.StockQuantity.Name = "StockQuantity";
+            this.StockQuantity.Size = new System.Drawing.Size(132, 22);
+            this.StockQuantity.TabIndex = 20;
+            this.StockQuantity.Text = "Stock Quantity:";
+            // 
+            // StockName
+            // 
+            this.StockName.AutoSize = true;
+            this.StockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockName.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockName.Location = new System.Drawing.Point(319, 161);
+            this.StockName.Name = "StockName";
+            this.StockName.Size = new System.Drawing.Size(112, 22);
+            this.StockName.TabIndex = 19;
+            this.StockName.Text = "Stock Name:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtBoxTotalPrice);
+            this.Controls.Add(this.TotalPrice);
+            this.Controls.Add(this.txtBoxStockPrice);
+            this.Controls.Add(this.txtBoxStockQuantity);
+            this.Controls.Add(this.txtBoxStockName);
+            this.Controls.Add(this.StockPrice);
+            this.Controls.Add(this.StockQuantity);
+            this.Controls.Add(this.StockName);
             this.Controls.Add(this.AddStocks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.namePanel);
@@ -209,6 +330,7 @@
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +349,15 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label AddStocks;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.TextBox txtBoxTotalPrice;
+        private System.Windows.Forms.Label TotalPrice;
+        private System.Windows.Forms.TextBox txtBoxStockPrice;
+        private System.Windows.Forms.TextBox txtBoxStockQuantity;
+        private System.Windows.Forms.TextBox txtBoxStockName;
+        private System.Windows.Forms.Label StockPrice;
+        private System.Windows.Forms.Label StockQuantity;
+        private System.Windows.Forms.Label StockName;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

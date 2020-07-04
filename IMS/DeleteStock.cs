@@ -23,6 +23,7 @@ namespace IMS
             btnDelete.Enabled = false;
         }
 
+        // Button All Stock
         private void btnAllStock_Click(object sender, EventArgs e)
         {
             HomePage hp = new HomePage();
@@ -30,6 +31,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Add Stock
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddStock ads = new AddStock();
@@ -37,6 +39,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Update Stock
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdateStock us = new UpdateStock();
@@ -44,6 +47,7 @@ namespace IMS
             this.Hide();
         }
 
+        //Button Change Password
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword cp = new ChangePassword();
@@ -51,6 +55,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Logout
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm lf = new LoginForm();

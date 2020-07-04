@@ -40,8 +40,10 @@
             this.btnAllStock = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.AllStocks = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -189,12 +191,21 @@
             this.AllStocks.TabIndex = 9;
             this.AllStocks.Text = "All Stocks";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(209, 99);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(815, 500);
+            this.dataGridView1.TabIndex = 10;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AllStocks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.namePanel);
@@ -208,6 +219,7 @@
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +238,6 @@
         private System.Windows.Forms.Button btnAllStock;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label AllStocks;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

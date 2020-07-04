@@ -23,6 +23,7 @@ namespace IMS
             btnUpdate.Enabled = false;
         }
 
+        // Button All Stock
         private void btnAllStock_Click(object sender, EventArgs e)
         {
             HomePage hp = new HomePage();
@@ -30,6 +31,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Add Stock
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddStock ads = new AddStock();
@@ -37,6 +39,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Delete Stock
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteStock ds = new DeleteStock();
@@ -44,6 +47,7 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Change Password
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             ChangePassword cp = new ChangePassword();
@@ -51,11 +55,21 @@ namespace IMS
             this.Hide();
         }
 
+        // Button Logout
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm lf = new LoginForm();
             lf.Show();
             this.Hide();
+        }
+
+        // Only Numbers in Quantity and Price
+        private void txtBoxStockQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsControl(e.KeyChar) && !char.IsNumber(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -40,6 +40,14 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.DeleteStocks = new System.Windows.Forms.Label();
+            this.btnFetchData = new System.Windows.Forms.Button();
+            this.btnDeleteStock = new System.Windows.Forms.Button();
+            this.txtBoxStockPrice = new System.Windows.Forms.TextBox();
+            this.txtBoxStockQuantity = new System.Windows.Forms.TextBox();
+            this.txtBoxStockName = new System.Windows.Forms.TextBox();
+            this.StockPrice = new System.Windows.Forms.Label();
+            this.StockQuantity = new System.Windows.Forms.Label();
+            this.StockName = new System.Windows.Forms.Label();
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -189,12 +197,105 @@
             this.DeleteStocks.TabIndex = 17;
             this.DeleteStocks.Text = "Delete Stock";
             // 
+            // btnFetchData
+            // 
+            this.btnFetchData.BackColor = System.Drawing.Color.Green;
+            this.btnFetchData.FlatAppearance.BorderSize = 0;
+            this.btnFetchData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFetchData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFetchData.ForeColor = System.Drawing.Color.White;
+            this.btnFetchData.Location = new System.Drawing.Point(495, 228);
+            this.btnFetchData.Name = "btnFetchData";
+            this.btnFetchData.Size = new System.Drawing.Size(426, 30);
+            this.btnFetchData.TabIndex = 45;
+            this.btnFetchData.Text = "Fetch Data";
+            this.btnFetchData.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteStock
+            // 
+            this.btnDeleteStock.BackColor = System.Drawing.Color.Red;
+            this.btnDeleteStock.FlatAppearance.BorderSize = 0;
+            this.btnDeleteStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStock.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteStock.Location = new System.Drawing.Point(495, 451);
+            this.btnDeleteStock.Name = "btnDeleteStock";
+            this.btnDeleteStock.Size = new System.Drawing.Size(426, 30);
+            this.btnDeleteStock.TabIndex = 44;
+            this.btnDeleteStock.Text = "Delete Stock";
+            this.btnDeleteStock.UseVisualStyleBackColor = false;
+            // 
+            // txtBoxStockPrice
+            // 
+            this.txtBoxStockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockPrice.Location = new System.Drawing.Point(495, 368);
+            this.txtBoxStockPrice.Name = "txtBoxStockPrice";
+            this.txtBoxStockPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockPrice.TabIndex = 43;
+            // 
+            // txtBoxStockQuantity
+            // 
+            this.txtBoxStockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockQuantity.Location = new System.Drawing.Point(495, 301);
+            this.txtBoxStockQuantity.Name = "txtBoxStockQuantity";
+            this.txtBoxStockQuantity.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockQuantity.TabIndex = 42;
+            // 
+            // txtBoxStockName
+            // 
+            this.txtBoxStockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxStockName.Location = new System.Drawing.Point(495, 159);
+            this.txtBoxStockName.Name = "txtBoxStockName";
+            this.txtBoxStockName.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockName.TabIndex = 41;
+            // 
+            // StockPrice
+            // 
+            this.StockPrice.AutoSize = true;
+            this.StockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockPrice.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockPrice.Location = new System.Drawing.Point(325, 370);
+            this.StockPrice.Name = "StockPrice";
+            this.StockPrice.Size = new System.Drawing.Size(106, 22);
+            this.StockPrice.TabIndex = 40;
+            this.StockPrice.Text = "Stock Price:";
+            // 
+            // StockQuantity
+            // 
+            this.StockQuantity.AutoSize = true;
+            this.StockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockQuantity.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockQuantity.Location = new System.Drawing.Point(299, 303);
+            this.StockQuantity.Name = "StockQuantity";
+            this.StockQuantity.Size = new System.Drawing.Size(132, 22);
+            this.StockQuantity.TabIndex = 39;
+            this.StockQuantity.Text = "Stock Quantity:";
+            // 
+            // StockName
+            // 
+            this.StockName.AutoSize = true;
+            this.StockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockName.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.StockName.Location = new System.Drawing.Point(319, 161);
+            this.StockName.Name = "StockName";
+            this.StockName.Size = new System.Drawing.Size(112, 22);
+            this.StockName.TabIndex = 38;
+            this.StockName.Text = "Stock Name:";
+            // 
             // DeleteStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.btnFetchData);
+            this.Controls.Add(this.btnDeleteStock);
+            this.Controls.Add(this.txtBoxStockPrice);
+            this.Controls.Add(this.txtBoxStockQuantity);
+            this.Controls.Add(this.txtBoxStockName);
+            this.Controls.Add(this.StockPrice);
+            this.Controls.Add(this.StockQuantity);
+            this.Controls.Add(this.StockName);
             this.Controls.Add(this.namePanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.DeleteStocks);
@@ -226,5 +327,13 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label DeleteStocks;
+        private System.Windows.Forms.Button btnFetchData;
+        private System.Windows.Forms.Button btnDeleteStock;
+        private System.Windows.Forms.TextBox txtBoxStockPrice;
+        private System.Windows.Forms.TextBox txtBoxStockQuantity;
+        private System.Windows.Forms.TextBox txtBoxStockName;
+        private System.Windows.Forms.Label StockPrice;
+        private System.Windows.Forms.Label StockQuantity;
+        private System.Windows.Forms.Label StockName;
     }
 }
