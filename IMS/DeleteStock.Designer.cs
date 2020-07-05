@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteStock));
             this.namePanel = new System.Windows.Forms.Panel();
             this.lblSignUpForm = new System.Windows.Forms.Label();
@@ -48,8 +49,14 @@
             this.StockPrice = new System.Windows.Forms.Label();
             this.StockQuantity = new System.Windows.Forms.Label();
             this.StockName = new System.Windows.Forms.Label();
+            this.txtBoxTotalPrice = new System.Windows.Forms.TextBox();
+            this.totalPrice = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.namePanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // namePanel
@@ -210,6 +217,7 @@
             this.btnFetchData.TabIndex = 45;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = false;
+            this.btnFetchData.Click += new System.EventHandler(this.btnFetchData_Click);
             // 
             // btnDeleteStock
             // 
@@ -218,12 +226,13 @@
             this.btnDeleteStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStock.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStock.Location = new System.Drawing.Point(495, 451);
+            this.btnDeleteStock.Location = new System.Drawing.Point(495, 504);
             this.btnDeleteStock.Name = "btnDeleteStock";
             this.btnDeleteStock.Size = new System.Drawing.Size(426, 30);
             this.btnDeleteStock.TabIndex = 44;
             this.btnDeleteStock.Text = "Delete Stock";
             this.btnDeleteStock.UseVisualStyleBackColor = false;
+            this.btnDeleteStock.Click += new System.EventHandler(this.btnDeleteStock_Click);
             // 
             // txtBoxStockPrice
             // 
@@ -282,12 +291,41 @@
             this.StockName.TabIndex = 38;
             this.StockName.Text = "Stock Name:";
             // 
+            // txtBoxTotalPrice
+            // 
+            this.txtBoxTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxTotalPrice.Location = new System.Drawing.Point(495, 434);
+            this.txtBoxTotalPrice.Name = "txtBoxTotalPrice";
+            this.txtBoxTotalPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxTotalPrice.TabIndex = 47;
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.AutoSize = true;
+            this.totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPrice.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.totalPrice.Location = new System.Drawing.Point(329, 434);
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.Size = new System.Drawing.Size(102, 22);
+            this.totalPrice.TabIndex = 46;
+            this.totalPrice.Text = "Total Price:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // DeleteStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.txtBoxTotalPrice);
+            this.Controls.Add(this.totalPrice);
             this.Controls.Add(this.btnFetchData);
             this.Controls.Add(this.btnDeleteStock);
             this.Controls.Add(this.txtBoxStockPrice);
@@ -309,6 +347,8 @@
             this.namePanel.ResumeLayout(false);
             this.namePanel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +375,9 @@
         private System.Windows.Forms.Label StockPrice;
         private System.Windows.Forms.Label StockQuantity;
         private System.Windows.Forms.Label StockName;
+        private System.Windows.Forms.TextBox txtBoxTotalPrice;
+        private System.Windows.Forms.Label totalPrice;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

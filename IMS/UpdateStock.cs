@@ -22,6 +22,7 @@ namespace IMS
         {
             UserID.Text = "User ID: " + LoginForm.userId;
             btnUpdate.Enabled = false;
+            txtBoxTotalPrice.ReadOnly = true;
         }
 
         // Button All Stock
@@ -80,6 +81,7 @@ namespace IMS
             if(txtBoxStockName.Text == "")
             {
                 errorProvider1.SetError(btnFetchData, "**Stock Name Required");
+                txtBoxStockName.ReadOnly = false;
             }
             try
             {
@@ -87,9 +89,10 @@ namespace IMS
                 con.Open();
                 if (txtBoxStockName.Text != "")
                 {
+                    errorProvider1.Clear();
                     //SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
                     //con.Open();
-                    SqlCommand cmd = new SqlCommand(" select quantity, price from stock where stockName = '"+txtBoxStockName.Text+"' and userId = '" + LoginForm.userId + "' ", con);
+                    SqlCommand cmd = new SqlCommand(" select quantity, price, total from stock where stockName = '"+txtBoxStockName.Text+"' and userId = '" + LoginForm.userId + "' ", con);
                     //cmd.Parameters.AddWithValue("@StockName", txtBoxStockName.Text);
 
                     SqlDataReader da = cmd.ExecuteReader();
@@ -97,17 +100,15 @@ namespace IMS
                     {
                         txtBoxStockQuantity.Text = da.GetValue(0).ToString();
                         txtBoxStockPrice.Text = da.GetValue(1).ToString();
+                        txtBoxTotalPrice.Text = da.GetValue(2).ToString();
                     }
                     else
                     {
                         txtBoxStockName.ReadOnly = false;
-                        MessageBox.Show("No Data Found for This Stock Name", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
+                        MessageBox.Show("No Data Found for This Stock Name", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
                     }
                     con.Close();
-                }
-                
+                }                
             }
             catch(Exception exc)
             {
@@ -152,7 +153,8 @@ namespace IMS
             }
             else
             {
-                errorProvider2.SetError(btnSubmit, "**All Fields Required");
+                
+                errorProvider2.SetError(btnSubmit, "**All Fields Required");                
             }
         }
     }
