@@ -65,8 +65,9 @@
             this.namePanel.Controls.Add(this.lblSignUpForm);
             this.namePanel.Controls.Add(this.UserID);
             this.namePanel.Location = new System.Drawing.Point(-1, 0);
+            this.namePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.namePanel.Name = "namePanel";
-            this.namePanel.Size = new System.Drawing.Size(1036, 56);
+            this.namePanel.Size = new System.Drawing.Size(1381, 69);
             this.namePanel.TabIndex = 12;
             // 
             // lblSignUpForm
@@ -74,9 +75,10 @@
             this.lblSignUpForm.AutoSize = true;
             this.lblSignUpForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignUpForm.ForeColor = System.Drawing.Color.White;
-            this.lblSignUpForm.Location = new System.Drawing.Point(397, 12);
+            this.lblSignUpForm.Location = new System.Drawing.Point(529, 15);
+            this.lblSignUpForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSignUpForm.Name = "lblSignUpForm";
-            this.lblSignUpForm.Size = new System.Drawing.Size(280, 33);
+            this.lblSignUpForm.Size = new System.Drawing.Size(356, 42);
             this.lblSignUpForm.TabIndex = 2;
             this.lblSignUpForm.Text = "Dhruv Stock System";
             // 
@@ -85,9 +87,10 @@
             this.UserID.AutoSize = true;
             this.UserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserID.ForeColor = System.Drawing.Color.White;
-            this.UserID.Location = new System.Drawing.Point(0, 35);
+            this.UserID.Location = new System.Drawing.Point(0, 43);
+            this.UserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserID.Name = "UserID";
-            this.UserID.Size = new System.Drawing.Size(80, 22);
+            this.UserID.Size = new System.Drawing.Size(98, 26);
             this.UserID.TabIndex = 3;
             this.UserID.Text = "User ID: ";
             // 
@@ -100,9 +103,10 @@
             this.panel1.Controls.Add(this.btnChangePassword);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Location = new System.Drawing.Point(0, 56);
+            this.panel1.Location = new System.Drawing.Point(0, 69);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 555);
+            this.panel1.Size = new System.Drawing.Size(267, 683);
             this.panel1.TabIndex = 13;
             // 
             // btnAdd
@@ -112,9 +116,10 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(0, 140);
+            this.btnAdd.Location = new System.Drawing.Point(0, 172);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(200, 30);
+            this.btnAdd.Size = new System.Drawing.Size(267, 37);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add Stock";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -127,9 +132,10 @@
             this.btnAllStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAllStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllStock.ForeColor = System.Drawing.Color.White;
-            this.btnAllStock.Location = new System.Drawing.Point(0, 70);
+            this.btnAllStock.Location = new System.Drawing.Point(0, 86);
+            this.btnAllStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAllStock.Name = "btnAllStock";
-            this.btnAllStock.Size = new System.Drawing.Size(200, 30);
+            this.btnAllStock.Size = new System.Drawing.Size(267, 37);
             this.btnAllStock.TabIndex = 7;
             this.btnAllStock.Text = "All Stocks";
             this.btnAllStock.UseVisualStyleBackColor = false;
@@ -142,9 +148,10 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(0, 514);
+            this.btnLogout.Location = new System.Drawing.Point(0, 633);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(200, 30);
+            this.btnLogout.Size = new System.Drawing.Size(267, 37);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -157,9 +164,10 @@
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(0, 350);
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 431);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(200, 30);
+            this.btnChangePassword.Size = new System.Drawing.Size(267, 37);
             this.btnChangePassword.TabIndex = 5;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -172,9 +180,10 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(0, 210);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 258);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(200, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(267, 37);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update Stock";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -186,9 +195,10 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(0, 280);
+            this.btnDelete.Location = new System.Drawing.Point(0, 345);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(200, 30);
+            this.btnDelete.Size = new System.Drawing.Size(267, 37);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Stock";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -198,9 +208,10 @@
             // 
             this.UpdateStocks.AutoSize = true;
             this.UpdateStocks.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateStocks.Location = new System.Drawing.Point(530, 60);
+            this.UpdateStocks.Location = new System.Drawing.Point(707, 74);
+            this.UpdateStocks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UpdateStocks.Name = "UpdateStocks";
-            this.UpdateStocks.Size = new System.Drawing.Size(153, 25);
+            this.UpdateStocks.Size = new System.Drawing.Size(191, 29);
             this.UpdateStocks.TabIndex = 14;
             this.UpdateStocks.Text = "Update Stocks";
             // 
@@ -211,10 +222,11 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(495, 504);
+            this.btnSubmit.Location = new System.Drawing.Point(660, 620);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(426, 30);
-            this.btnSubmit.TabIndex = 36;
+            this.btnSubmit.Size = new System.Drawing.Size(568, 37);
+            this.btnSubmit.TabIndex = 35;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -222,29 +234,32 @@
             // txtBoxStockPrice
             // 
             this.txtBoxStockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxStockPrice.Location = new System.Drawing.Point(495, 368);
+            this.txtBoxStockPrice.Location = new System.Drawing.Point(660, 453);
+            this.txtBoxStockPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxStockPrice.Name = "txtBoxStockPrice";
-            this.txtBoxStockPrice.Size = new System.Drawing.Size(426, 24);
-            this.txtBoxStockPrice.TabIndex = 33;
+            this.txtBoxStockPrice.Size = new System.Drawing.Size(567, 28);
+            this.txtBoxStockPrice.TabIndex = 34;
             this.txtBoxStockPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
             this.txtBoxStockPrice.Leave += new System.EventHandler(this.txtBoxStockPrice_Leave);
             // 
             // txtBoxStockQuantity
             // 
             this.txtBoxStockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxStockQuantity.Location = new System.Drawing.Point(495, 301);
+            this.txtBoxStockQuantity.Location = new System.Drawing.Point(660, 370);
+            this.txtBoxStockQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxStockQuantity.Name = "txtBoxStockQuantity";
-            this.txtBoxStockQuantity.Size = new System.Drawing.Size(426, 24);
-            this.txtBoxStockQuantity.TabIndex = 32;
+            this.txtBoxStockQuantity.Size = new System.Drawing.Size(567, 28);
+            this.txtBoxStockQuantity.TabIndex = 33;
             this.txtBoxStockQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxStockQuantity_KeyPress);
             this.txtBoxStockQuantity.Leave += new System.EventHandler(this.txtBoxStockPrice_Leave);
             // 
             // txtBoxStockName
             // 
             this.txtBoxStockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxStockName.Location = new System.Drawing.Point(495, 159);
+            this.txtBoxStockName.Location = new System.Drawing.Point(660, 196);
+            this.txtBoxStockName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxStockName.Name = "txtBoxStockName";
-            this.txtBoxStockName.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxStockName.Size = new System.Drawing.Size(567, 28);
             this.txtBoxStockName.TabIndex = 31;
             // 
             // StockPrice
@@ -252,9 +267,10 @@
             this.StockPrice.AutoSize = true;
             this.StockPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StockPrice.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.StockPrice.Location = new System.Drawing.Point(325, 370);
+            this.StockPrice.Location = new System.Drawing.Point(433, 455);
+            this.StockPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StockPrice.Name = "StockPrice";
-            this.StockPrice.Size = new System.Drawing.Size(106, 22);
+            this.StockPrice.Size = new System.Drawing.Size(129, 26);
             this.StockPrice.TabIndex = 30;
             this.StockPrice.Text = "Stock Price:";
             // 
@@ -263,9 +279,10 @@
             this.StockQuantity.AutoSize = true;
             this.StockQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StockQuantity.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.StockQuantity.Location = new System.Drawing.Point(299, 303);
+            this.StockQuantity.Location = new System.Drawing.Point(399, 373);
+            this.StockQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StockQuantity.Name = "StockQuantity";
-            this.StockQuantity.Size = new System.Drawing.Size(132, 22);
+            this.StockQuantity.Size = new System.Drawing.Size(160, 26);
             this.StockQuantity.TabIndex = 29;
             this.StockQuantity.Text = "Stock Quantity:";
             // 
@@ -274,9 +291,10 @@
             this.StockName.AutoSize = true;
             this.StockName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StockName.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.StockName.Location = new System.Drawing.Point(319, 161);
+            this.StockName.Location = new System.Drawing.Point(425, 198);
+            this.StockName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StockName.Name = "StockName";
-            this.StockName.Size = new System.Drawing.Size(112, 22);
+            this.StockName.Size = new System.Drawing.Size(138, 26);
             this.StockName.TabIndex = 28;
             this.StockName.Text = "Stock Name:";
             // 
@@ -287,9 +305,10 @@
             this.btnFetchData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFetchData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFetchData.ForeColor = System.Drawing.Color.White;
-            this.btnFetchData.Location = new System.Drawing.Point(495, 228);
+            this.btnFetchData.Location = new System.Drawing.Point(660, 281);
+            this.btnFetchData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFetchData.Name = "btnFetchData";
-            this.btnFetchData.Size = new System.Drawing.Size(426, 30);
+            this.btnFetchData.Size = new System.Drawing.Size(568, 37);
             this.btnFetchData.TabIndex = 32;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = false;
@@ -306,9 +325,10 @@
             // txtBoxTotalPrice
             // 
             this.txtBoxTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTotalPrice.Location = new System.Drawing.Point(495, 435);
+            this.txtBoxTotalPrice.Location = new System.Drawing.Point(660, 535);
+            this.txtBoxTotalPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxTotalPrice.Name = "txtBoxTotalPrice";
-            this.txtBoxTotalPrice.Size = new System.Drawing.Size(426, 24);
+            this.txtBoxTotalPrice.Size = new System.Drawing.Size(567, 28);
             this.txtBoxTotalPrice.TabIndex = 38;
             // 
             // totalPrice
@@ -316,18 +336,19 @@
             this.totalPrice.AutoSize = true;
             this.totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPrice.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.totalPrice.Location = new System.Drawing.Point(329, 437);
+            this.totalPrice.Location = new System.Drawing.Point(439, 538);
+            this.totalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalPrice.Name = "totalPrice";
-            this.totalPrice.Size = new System.Drawing.Size(102, 22);
+            this.totalPrice.Size = new System.Drawing.Size(121, 26);
             this.totalPrice.TabIndex = 37;
             this.totalPrice.Text = "Total Price:";
             // 
             // UpdateStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.ClientSize = new System.Drawing.Size(1379, 752);
             this.Controls.Add(this.txtBoxTotalPrice);
             this.Controls.Add(this.totalPrice);
             this.Controls.Add(this.btnFetchData);
@@ -343,6 +364,7 @@
             this.Controls.Add(this.UpdateStocks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "UpdateStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

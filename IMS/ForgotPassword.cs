@@ -186,7 +186,7 @@ namespace IMS
             to = (txtBoxEmail.Text).ToString();
             from = "";
             pass = "";
-            messageBody = "Dhruv Stock System Password Reset OTP Code is: " + OTPCode + ". Dont share OTP with anyone.";
+            messageBody = "Your Password Reset OTP Code is: " + OTPCode + ".";
             message.To.Add(to);
             message.From = new MailAddress(from);
             message.Body = messageBody;
@@ -201,7 +201,7 @@ namespace IMS
             try
             {
                 smtp.Send(message);
-                MessageBox.Show("Code Sent Successfully", "OTP Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Code Sent Successfully\nCheck your E-Mail inbox or in Spam", "OTP Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)
             {
@@ -263,9 +263,9 @@ namespace IMS
 
             // Reset Password
 
-            if (txtBoxNewPassword.Text == txtBoxConfirmPassword.Text)
+            if (txtBoxNewPassword.Text != "" && txtBoxConfirmPassword.Text == txtBoxNewPassword.Text)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True"); 
                 SqlCommand cmd = new SqlCommand("UPDATE dbo.signup SET uPassword = '"+ txtBoxNewPassword.Text + "', Cpassword = '" + txtBoxConfirmPassword.Text + "' WHERE eMail = '"+ txtBoxEmail.Text +"' ", con);
                 con.Open();
                 cmd.ExecuteNonQuery();

@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 namespace IMS
 {
     public partial class HomePage : Form
-    {
+    { 
         string connectionString = @"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True";
         public HomePage()
         {

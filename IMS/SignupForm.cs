@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using System.Security.Cryptography.X509Certificates;
+using System.Configuration;
 
 namespace IMS
 {
@@ -279,8 +280,9 @@ namespace IMS
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
-                    SqlCommand cmd = new SqlCommand("insert into dbo.signup values('" + txtBoxFName.Text + "', '" + txtBoxLName.Text + "', '" + txtBoxMobileNo.Text + "', '" + txtboxEMail.Text + "', '" + txtBoxUid.Text + "', '" + txtBoxPassword.Text + "', '" + txtBoxConfirmPassword.Text + "' )", con);
+                    //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
+                    SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True"); 
+                    SqlCommand cmd = new SqlCommand("insert into signup values('" + txtBoxFName.Text + "', '" + txtBoxLName.Text + "', '" + txtBoxMobileNo.Text + "', '" + txtboxEMail.Text + "', '" + txtBoxUid.Text + "', '" + txtBoxPassword.Text + "', '" + txtBoxConfirmPassword.Text + "' )", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();

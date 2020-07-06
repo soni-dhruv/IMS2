@@ -25,6 +25,7 @@ namespace IMS
             txtBoxStockPrice.ReadOnly = true;
             txtBoxTotalPrice.ReadOnly = true;
             btnDelete.Enabled = false;
+            this.ActiveControl = txtBoxStockName;
         }
 
         // Button All Stock
@@ -94,6 +95,7 @@ namespace IMS
                     {
                         txtBoxStockName.ReadOnly = false;
                         MessageBox.Show("No Data Found for This Stock Name", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtBoxStockName.Text = "";
                     }
                     con.Close();
                 }
@@ -112,6 +114,7 @@ namespace IMS
                 {
                     errorProvider2.Clear();
                     SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
+                    //SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
                     SqlCommand cmd = new SqlCommand("delete dbo.stock where userId = '"+ LoginForm.userId +"' and stockName = '"+ txtBoxStockName.Text +"'", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -133,6 +136,7 @@ namespace IMS
 
                 errorProvider2.SetError(btnDelete, "**All Fields Required");
             }
+            this.ActiveControl = txtBoxStockName;
         }
     }
 }

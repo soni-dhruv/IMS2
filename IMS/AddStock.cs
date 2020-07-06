@@ -35,6 +35,7 @@ namespace IMS
             UserID.Text = "User ID: " + LoginForm.userId;
             btnAdd.Enabled = false;
             txtBoxTotalPrice.ReadOnly = true;
+            this.ActiveControl = txtBoxStockName;
         }
 
         // Button Update Stock
@@ -121,13 +122,14 @@ namespace IMS
             {
                 errorProvider1.SetError(btnSubmit, "**All Fields Required");
             }
-
+            
             // Clear
             txtBoxStockName.Text = "";
             txtBoxStockQuantity.Text = "";
             txtBoxStockPrice.Text = "";
             txtBoxTotalPrice.Text = "";
 
+            this.ActiveControl = txtBoxStockName;
         }
     }
 }

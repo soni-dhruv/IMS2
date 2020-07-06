@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace IMS
 {
@@ -116,28 +117,34 @@ namespace IMS
             }
 
             //Main m = new Main();
-            //Connection Database            
-            SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select * from signup where userId=@id and uPassword=@pass", con);
-            cmd.Parameters.AddWithValue("@id", txtBoxuID.Text);
-            cmd.Parameters.AddWithValue("@pass", txtBoxPassword.Text);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            con.Open();
-            if (dt.Rows.Count > 0)
+            //Connection Database   
+            try
             {
-                //MessageBox.Show("Login Successful!");
-                userId = txtBoxuID.Text;
-                HomePage hp = new HomePage();
-                hp.Show();
-                this.Hide();
-                userId = txtBoxuID.Text;
+                //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["newConnectionString"].ConnectionString);
+                SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("select * from signup where userId=@id and uPassword=@pass", con);
+                cmd.Parameters.AddWithValue("@id", txtBoxuID.Text);
+                cmd.Parameters.AddWithValue("@pass", txtBoxPassword.Text);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                con.Open();
+                if (dt.Rows.Count > 0)
+                {
+                    userId = txtBoxuID.Text;
+                    HomePage hp = new HomePage();
+                    hp.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    errorProvider3.SetError(btnLogin, "Kindly Enter Correct Username and Password");
+                }
             }
-            else
+            catch (Exception exc)
             {
-                errorProvider3.SetError(btnLogin, "Kindly Enter Correct Username and Password");
-            }            
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

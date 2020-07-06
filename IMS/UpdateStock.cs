@@ -23,6 +23,7 @@ namespace IMS
             UserID.Text = "User ID: " + LoginForm.userId;
             btnUpdate.Enabled = false;
             txtBoxTotalPrice.ReadOnly = true;
+            this.ActiveControl = txtBoxStockName;
         }
 
         // Button All Stock
@@ -105,7 +106,8 @@ namespace IMS
                     else
                     {
                         txtBoxStockName.ReadOnly = false;
-                        MessageBox.Show("No Data Found for This Stock Name", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                        MessageBox.Show("No Data Found for This Stock Name", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtBoxStockName.Text = "";
                     }
                     con.Close();
                 }                
@@ -135,7 +137,7 @@ namespace IMS
                 {
                     errorProvider2.Clear();
                     SqlConnection con = new SqlConnection(@"Data Source=DHRUV;Initial Catalog=IMS;Integrated Security=True");
-                    SqlCommand cmd = new SqlCommand("UPDATE dbo.stock SET quantity = '" + txtBoxStockQuantity.Text + "', price = '" + txtBoxStockPrice.Text + "', total = '"+txtBoxTotalPrice.Text +"' WHERE userId = '" + LoginForm.userId + "' ", con);
+                    SqlCommand cmd = new SqlCommand("UPDATE dbo.stock SET quantity = '" + txtBoxStockQuantity.Text + "', price = '" + txtBoxStockPrice.Text + "', total = '"+txtBoxTotalPrice.Text +"' WHERE userId = '" + LoginForm.userId + "' and stockName = '"+txtBoxStockName.Text+"'", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -156,6 +158,7 @@ namespace IMS
                 
                 errorProvider2.SetError(btnSubmit, "**All Fields Required");                
             }
+            this.ActiveControl = txtBoxStockName;
         }
     }
 }
